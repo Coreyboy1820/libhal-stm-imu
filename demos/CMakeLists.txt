@@ -22,6 +22,7 @@ libhal_build_demos(
 
   PACKAGES
   libhal-stm-imu
+  libhal-soft
 
   LINK_LIBRARIES
   libhal::stm-imu

@@ -26,7 +26,8 @@ struct hardware_map_t
   hal::serial* console;
   hal::i2c* i2c;
   hal::spi* spi;
-  hal::output_pin* output_pin;
+  hal::output_pin* output_pin0;
+  hal::output_pin* output_pin1;
   hal::steady_clock* clock;
   hal::callback<void()> reset;
 };

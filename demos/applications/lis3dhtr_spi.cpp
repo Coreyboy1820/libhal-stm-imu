@@ -28,7 +28,7 @@ void application(hardware_map_t& p_map)
   auto& clock = *p_map.clock;
   auto& console = *p_map.console;
   auto& spi = *p_map.spi;
-  auto& cs = *p_map.output_pin;
+  auto& cs = *p_map.output_pin0;
 
   hal::print(console, "Starting lis3dhtr_spi Application...\n");
   hal::delay(clock, 50ms);

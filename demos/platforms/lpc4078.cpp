@@ -49,13 +49,15 @@ hardware_map_t initialize_platform()
 
   static hal::lpc40::spi spi(2);
 
-  static hal::lpc40::output_pin output_pin(0, 16);
+  static hal::lpc40::output_pin output_pin0(1, 15); // scl
+  static hal::lpc40::output_pin output_pin1(1, 23); // sda
 
   return hardware_map_t{
     .console = &uart0,
     .i2c = &i2c,
     .spi = &spi,
-    .output_pin = &output_pin,
+    .output_pin0 = &output_pin0,
+    .output_pin1 = &output_pin1,
     .clock = &counter,
     .reset = []() { hal::cortex_m::reset(); },
   };
